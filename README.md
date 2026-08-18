@@ -49,22 +49,6 @@ Re-index again any time files in that folder change — the index doesn't update
 | F5 | Refresh |
 | Backspace | Go to parent folder |
 
-## Building from source
-
-Requires Python 3 with `openpyxl`, `python-docx`, and `pdfplumber` installed:
-
-```
-pip install openpyxl python-docx pdfplumber pyinstaller
-```
-
-Build the portable `.exe`:
-
-```
-python -m PyInstaller --onefile --windowed --icon=assets/icon.ico --add-data "assets;assets" --name "ToolBoxExplorer" main.py
-```
-
-Output: `dist/ToolBoxExplorer.exe`
-
 ## Notes
 
 - The search index is stored separately from the app, at `%USERPROFILE%\.toolbox_finder\`, so rebuilding the `.exe` never affects your existing index.
